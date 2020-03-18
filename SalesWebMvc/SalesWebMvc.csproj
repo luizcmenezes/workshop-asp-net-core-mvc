@@ -7,8 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\HomeController1.cs" />
+    <Compile Remove="Controllers\ValuesController.cs" />
     <Compile Remove="Migrations\20191127191345_Inicial.cs" />
     <Compile Remove="Migrations\20191127191345_Inicial.Designer.cs" />
+    <Compile Remove="Migrations\20200318143004_Initial.cs" />
+    <Compile Remove="Migrations\20200318143004_Initial.Designer.cs" />
   </ItemGroup>
 
 
@@ -20,7 +24,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
     <PackageReference Include="MySql.Data" Version="8.0.18" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.1.1" />
   </ItemGroup>
