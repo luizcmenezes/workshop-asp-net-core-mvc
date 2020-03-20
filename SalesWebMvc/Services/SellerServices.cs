@@ -22,6 +22,7 @@ namespace SalesWebMvc.Services
 
         public void Insert(Seller obj)
         {
+            obj.Department = _conetxt.Departments.First();
             _conetxt.Add(obj);
             _conetxt.SaveChanges();
         }
