@@ -18,7 +18,7 @@ namespace SalesWebMvc.Data
 
         public void Seed()
         {
-            if (_context.Departments.Any() || 
+            if (_context.Department.Any() || 
                 _context.Seller.Any() ||
                 _context.SalesRecords.Any())
             {
@@ -44,7 +44,7 @@ namespace SalesWebMvc.Data
             SalesRecord r5 = new SalesRecord(5, new DateTime(2018, 09, 25), 9000.0, SaleStatus.Billed, s5);
             SalesRecord r6 = new SalesRecord(6, new DateTime(2018, 09, 25), 55000.0, SaleStatus.Billed, s6);
 
-            _context.Departments.AddRange(d1, d2, d3, d4);
+            _context.Department.AddRange(d1, d2, d3, d4);
             _context.Seller.AddRange(s1, s2, s3, s4, s5, s6);
             _context.SalesRecords.AddRange(r1, r2, r3, r4, r5, r6);
 
