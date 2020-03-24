@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace SalesWebMvc.Services
 {
@@ -15,9 +16,9 @@ namespace SalesWebMvc.Services
             _conetxt = context;
         }
 
-        public List<Department> FindAll()
+        public async Task<List<Department>> FindAllAsync()
         {
-            return _conetxt.Department.OrderBy(x => x.Name).ToList();
+            return await _conetxt.Department.OrderBy(x => x.Name).ToListAsync();
         }
     }
 }
